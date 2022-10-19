@@ -52,7 +52,7 @@ if (currentProvider) {
 - [Using the Provider](#using-the-provider)
 
 # Compatibility
-ABC Wallet support multi-chain functionality. At the moment of writing, [MetaMask](https://docs.metamask.io/guide/) is dominant crypto wallet for Ethereum and [Kaikas](https://docs.kaikas.io/) is for Kaikas. 
+ABC Wallet support multi-chain functionality. At the moment of writing, [MetaMask](https://docs.metamask.io/guide/) is dominant crypto wallet for Ethereum and [Kaikas](https://docs.kaikas.io/) is for Klaytn. 
 
 For Ethereum, [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193) clearly states `window.ethereum` is not part of the specification, however, to maximize the compatibility, ABC Wallet provider `window.abc` is also cloned to `window.ethereum`, and functions like MetaMask. 
 
