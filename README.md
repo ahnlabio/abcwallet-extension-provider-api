@@ -3,6 +3,9 @@
 
 ABC Wallet injects a global API into website visited by its users at `window.abc`. This API complies [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193), Ethereum Javascript provider API. We recommend using `abcwallet-extension-provider-api` to detect our provider on any platform or browser.
 
+Please download ABC Wallet chrome extension below:
+**[ABC Wallet Extension Download](https://chrome.google.com/webstore/detail/abc-wallet/mlhakagmgkmonhdonhkpjeebfphligng)**
+
 ```javascript
 import ABCProvider from 'abcwallet-extension-provider-api'; 
    
