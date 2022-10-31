@@ -1,10 +1,10 @@
 **ABC Wallet Extension Provider API**
 ---
 
-ABC Wallet injects a global API into website visited by its users at `window.abc`. This API complies [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193), Ethereum Javascript provider API. We recommend using `@abcwallet/abcwallet-extension-provider-api` to detect our provider on any platform or browser.
+ABC Wallet injects a global API into website visited by its users at `window.abc`. This API complies [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193), Ethereum Javascript provider API. We recommend using `abcwallet-extension-provider-api` to detect our provider on any platform or browser.
 
 ```javascript
-import ABCProvider from '@abcwallet/abcwallet-extension-provider-api'; 
+import ABCProvider from 'abcwallet-extension-provider-api'; 
    
 const currentProvider = await ABCProvider();
 if (currentProvider) {
@@ -289,7 +289,7 @@ This snippet explains how to accomplish the three most common requirements for w
 /* Detect the ABC Wallet Ethereum provider */
 /*****************************************/
 
-import ABCProvider from '@abcwallet/abcwallet-extension-provider-api';
+import ABCProvider from 'abcwallet-extension-provider-api';
 
 // this returns the provider, or null if it wasn't detected
 const provider = await ABCProvider();
