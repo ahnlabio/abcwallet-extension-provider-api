@@ -1,0 +1,26 @@
+{
+  "name": "abcwallet-extension-provider-api",
+  "version": "0.1.0",
+  "description": "ABC Wallet injects a global API into website visited by its users at `window.abc`. This API complies [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193), Ethereum Javascript provider API. We recommend using `@abcwallet/abc-provider` to detect our provider on any platform or browser.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahnlabio/abcwallet-extension-provider-api.git"
+  },
+  "keywords": [
+    "Ethereum",
+    "provider",
+    "extension",
+    "javascript",
+    "abcwallet"
+  ],
+  "author": "abcwallet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ahnlabio/abcwallet-extension-provider-api/issues"
+  },
+  "homepage": "https://github.com/ahnlabio/abcwallet-extension-provider-api#readme"
+}
