@@ -8,23 +8,16 @@ import ABCProvider from '@abcwallet/abc-provider';
    
 const currentProvider = await ABCProvider();
 if (currentProvider) {
-  if (currentProvider !== window.abc) {
-    console.log('Please connect to ABC Wallet.');
-  }
+
   await currentProvider.request({ method: 'eth_requestAccounts' });
 
   const web3 = new Web3(currentProvider);  
+  
   const userAccount = await web3.eth.getAccounts();
-  const chainId = await web3.eth.getChainId();
   const account = userAccount[0];
 
-  let ethBalance = await web3.eth.getBalance(account); 
-  ethBalance = web3.utils.fromWei(ethBalance, 'ether'); 
-
-  saveUserInfo(ethBalance, account, chainId);
-  if (userAccount.length === 0) {
-    console.log('Please connect to ABC Wallet.');
-  }
+  const chainId = await web3.eth.getChainId();
+  ...
 }
 ```
 
@@ -151,7 +144,7 @@ If the request fails for any reason, the Promise will reject with an [RPC Error]
 ABC Wallet supports most standardized Ethereum RPC methods, in addition to a number of methods that may not be supported by other wallets. See the ABC Wallet RPC API documentation for details.
 
 ### Example
-```
+```js
 params: [
   {
     from: '0x0e9bc621207f12ff37589a2f234b7d1a920df135',
@@ -159,8 +152,7 @@ params: [
     gas: '0x76c0', // 30400
     gasPrice: '0x9184e72a000', // 10000000000000
     value: '0x9184e72a', // 2441406250
-    data:
-      '0xd40e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675',
+    data: '0xd40e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675',
   },
 ];
 
@@ -297,10 +289,10 @@ This snippet explains how to accomplish the three most common requirements for w
 /* Detect the ABC Wallet Ethereum provider */
 /*****************************************/
 
-import detectEthereumProvider from '@abcwallet/abc-provider';
+import ABCProvider from '@abcwallet/abc-provider';
 
 // this returns the provider, or null if it wasn't detected
-const provider = await detectEthereumProvider();
+const provider = await ABCProvider();
 
 if (provider) {
   startApp(provider); // Initialize your app
@@ -309,9 +301,9 @@ if (provider) {
 }
 
 function startApp(provider) {
-  // If the provider returned by detectEthereumProvider is not the same as
-  // window.ethereum, something is overwriting it, perhaps another wallet.
-  if (provider !== window.ethereum) {
+  // If the provider returned by ABCProvider is not the same as
+  // window.abc, something is overwriting it, perhaps another wallet.
+  if (provider !== window.abc) {
     console.error('Do you have multiple wallets installed?');
   }
   // Access the decentralized web!
