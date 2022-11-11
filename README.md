@@ -58,10 +58,12 @@ For maximum compatibility and user's convenience, we created same APIs compatibl
 
 Through out this document, you may consider `window.abc` is linked clone to to `window.ethereum` and `window.klaytn`.
 
+Update(Nov. 2022): Please note starting from version 0.00.13, availability of `window.ethereum` and/or `window.klaytn` depends by user's option. Unless user have intentionally enabled, these options are OFF by default, resulting `window.abc` as only provider for ABC Wallet.
+
 # Basic Usage
 For any non-trivial EVM based web application — a.k.a. dapp, web3 site etc. — to work, you will have to:
 
-- Detect the provider (`window.abc` | `window.ethereum` | `window.klaytn`)
+- Detect the provider (`window.abc`)
 - Detect which network the user is connected to
 - Get the user's account
 
