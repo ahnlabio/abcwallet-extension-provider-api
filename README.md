@@ -71,6 +71,8 @@ The snippet at the top of this page is sufficient for detecting the provider.
 
 As a multi-chain supported wallet, ABC Wallet provides multiple ways on accessing provider functions for maximum compatibility, including [ethers](https://www.npmjs.com/package/ethers).
 
+For icons, please refer to `/icon` directory for right size for your DApp.
+
 We recommend to use convenience library, however, in cases where you need to directly access provider, please check [Using the Provider](#using-the-provider) section.
 
 # Chain IDs
